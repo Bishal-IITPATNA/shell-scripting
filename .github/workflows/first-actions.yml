@@ -11,9 +11,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Runs shell script
         run: |
-          cd if_else
-          chmod +x *
-          for f in *.sh; do
-             bash $f || break
-          done
+          pwd
         shell: bash

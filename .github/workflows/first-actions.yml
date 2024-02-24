@@ -1,18 +1,19 @@
+---
 name: Actions file for shell script
 on:
   push:
-    branches: [main]
-
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Runs shell script
-      run: |
+      - uses: actions/checkout@v2
+      - name: Runs shell script
+        run: |
           cd if_else
-         chmod +x *
-         for f in *.sh; do
-            bash $f || break
-         done
-      shell: bash
+          chmod +x *
+          for f in *.sh; do
+             bash $f || break
+          done
+        shell: bash

@@ -7,9 +7,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      folder: shell_programming/if_else
     steps:
       - uses: actions/checkout@v2
       - name: Runs shell script
         run: |
-          pwd
+          cd $folder
+          chmod +x *
+          for f in *.sh; do
+             bash $f || break
+          done
         shell: bash

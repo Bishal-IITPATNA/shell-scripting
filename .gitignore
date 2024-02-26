@@ -1,0 +1,5 @@
+# IDE/editor stuff
+.DS_Store
+.idea/
+cli/package-lock.json
+.gitmodules

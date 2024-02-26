@@ -13,3 +13,4 @@ then
   echo "Digit"
 else
   echo "Special character"
+fi
